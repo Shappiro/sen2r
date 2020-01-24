@@ -76,7 +76,8 @@ check_param_list <- function(pm, type = "string", check_paths = FALSE, correct =
   
   # -- Parameters of length 1: check length
   pm_length1 <- c(
-    "preprocess", "online", "order_lta", "downloader", "overwrite_safe", "rm_safe",
+    "preprocess", "online", "order_lta", "downloader", "overwrite_safe", "
+",
     "step_atmcorr", "max_cloud_safe", "timeperiod", "extent_name", "index_source",
     "mask_type", "max_mask", "mask_smooth", "mask_buffer", "clip_on_extent",
     "extent_as_mask", "reference_path", "res_s2", "unit", "proj", "resampling",
@@ -156,7 +157,7 @@ check_param_list <- function(pm, type = "string", check_paths = FALSE, correct =
   } else if (!pm$rm_safe %in% c("yes", "no", "l1c")) {
     print_message(
       type = type,
-      "Parameter \"online\" must be one among 'yes', 'no' and 'l1c' (setting to the default)."
+      "Parameter \"rm_safe\" must be one among 'yes', 'no' and 'l1c' (setting to the default)."
     )
     pm$rm_safe <- pm_def$rm_safe
   }
